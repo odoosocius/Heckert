@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="text_block_form_view" model="ir.ui.view">
+        <field name="name">Text.block</field>
+        <field name="model">text.block</field>
+        <field name="arch" type="xml">
+            <form string="Partner">
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="body_html_preline"/>
+                            <field name="body_html_postline"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="text_block_tree_view" model="ir.ui.view">
+        <field name="name">Text.block</field>
+        <field name="model">text.block</field>
+        <field name="arch" type="xml">
+            <tree string="Partner">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_text_block" model="ir.actions.act_window">
+        <field name="name">Text Block</field>
+        <field name="res_model">text.block</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Text
+            </p>
+            <p>
+
+            </p>
+        </field>
+    </record>
+    <menuitem parent="sale.menu_sale_config" name="Text Block" id="text_block_heckert" action="action_text_block"/>
+
+</odoo>
